@@ -4,6 +4,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
+        alert('Login successful!');
         navigate('/home')
     }
 

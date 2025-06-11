@@ -4,11 +4,12 @@ const Signup = () => {
     const navigate = useNavigate();
 
     const handleSignup = () => {
+        alert('Signup successful!');
         navigate('/home')
     }
 
     return (
-        <div className="bg-blue-100 h-screen flex items-center justify-center">
+        <div className="bg-blue-100 h-screen flex items-center  justify-center">
             <div className="bg-white p-8 rounded-lg shadow-md w-96">
                 <h1 className="text-3xl font-bold text-center">Signup</h1>
                 <label className="text-2xl font-bold text-blue-500">Username</label>
