@@ -20,7 +20,7 @@ const Signup = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:4537/signup", {
+      const res = await axios.post("https://training-june-1.onrender.com/signup", {
         fname,
         lname,
         uname,

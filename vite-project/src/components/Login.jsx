@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4537/login", {
+      const res = await axios.post("https://training-june-1.onrender.com/login", {
         username,
         password,
       });
