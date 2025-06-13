@@ -2,7 +2,10 @@ import Nav from '../Navbar';
 const AIML = () => {
     return(
          <>
-    <Nav />
+     <Nav isLogin={localStorage.getItem("isLogin") === "true"} onLogout={() => {
+         localStorage.setItem("isLogin", "false");
+         window.location.href = "/";
+     }} />
      <div className="bg-blue-200 p-4 shadow-md text-brown font-bold text-xl  h-screen text-center">
       <div className="bg-white p-10 rounded-lg shadow-md  m-10">
         <section>

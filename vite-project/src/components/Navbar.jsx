@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
-const Nav =() => {
+const Nav =({isLogin, onLogout}) => {
  var [dropdown, showdropdown] = useState(false);
  var [dept,showdept] = useState("");
  useEffect(() => {
@@ -25,8 +25,17 @@ const Nav =() => {
         
           <a href="/about">About</a>
             <a href="/home">Home</a>
-            <a href="/">Login</a>
-            
+           <li>
+        {isLogin ? (
+          <button onClick={onLogout} className="link" style={{ background: "none", border: "none", cursor: "pointer" }}>
+            Logout
+          </button>
+        ) : (
+          <Link to="/" className="link">
+            Login
+          </Link>
+        )}
+      </li>
             </div>
        </div>
 
